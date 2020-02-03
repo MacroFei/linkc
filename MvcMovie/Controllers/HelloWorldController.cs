@@ -16,25 +16,50 @@ namespace MvcMovie.Controllers
         /// https://localhost:44312/helloworld/index
         /// </summary>
         /// <returns></returns>
-        public string Index()
+        //public string Index()
+        //{
+        //    return "This is my default action...";
+        //}
+        public IActionResult Index()
         {
-            return "This is my default action...";
+            return View();
         }
 
-        /// <summary>
-        /// https://localhost:44312/HelloWorld/Welcome?name=Rick&numtimes=4
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="numTimes"></param>
-        /// <returns></returns>
-        public string Welcome(string name , int numTimes  = 1 )
-        {
-            return HtmlEncoder.Default.Encode($"Hello {name} , NumTime is : {numTimes}");
-        }
+        ///// <summary>
+        ///// https://localhost:44312/HelloWorld/Welcome?name=Rick&numtimes=4
+        ///// </summary>
+        ///// <param name="name"></param>
+        ///// <param name="numTimes"></param>
+        ///// <returns></returns>
+        //public string Welcome(string name , int numTimes  = 1 )
+        //{
+        //    return HtmlEncoder.Default.Encode($"Hello {name} , NumTime is : {numTimes}");
+        //}
+        ///// <summary>
+        ///// https://localhost:44312/HelloWorld/Welcome2/3?name=Rick
+        ///// </summary>
+        ///// <param name="name"></param>
+        ///// <param name="ID"></param>
+        ///// <returns></returns>
 
-        public string Welcome2(string name, int ID = 1)
+        //public string Welcome2(string name, int ID = 1)
+        //{
+        //    return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
+        //}
+
+        //public IActionResult Welcome(string name , int numTimes = 1)
+        //{
+        //    ViewData["Message"] = "Hello " + name;
+        //    ViewData["NumTimes"] = numTimes;
+        //    return View();
+        //}
+
+        public IActionResult Welcome(string name, int numTimes = 1)
         {
-            return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}");
+            ViewData["Message"] = "Hello " + name;
+            ViewData["NumTimes"] = numTimes;
+
+            return View();
         }
     }
 }
