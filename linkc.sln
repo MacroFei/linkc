@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "TodoApi\TodoApi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksApi", "BooksApi\BooksApi.csproj", "{F93A7C33-8215-4116-A7BF-72F5480FD54B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptWebApi", "JavaScriptWebApi\JavaScriptWebApi.csproj", "{71A5DA9A-2364-4EBE-A444-162E944A1B70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat", "SignalRChat\SignalRChat.csproj", "{0B9C41AF-0302-46DE-9830-ED7665DE69A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{F93A7C33-8215-4116-A7BF-72F5480FD54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F93A7C33-8215-4116-A7BF-72F5480FD54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F93A7C33-8215-4116-A7BF-72F5480FD54B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71A5DA9A-2364-4EBE-A444-162E944A1B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71A5DA9A-2364-4EBE-A444-162E944A1B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71A5DA9A-2364-4EBE-A444-162E944A1B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71A5DA9A-2364-4EBE-A444-162E944A1B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B9C41AF-0302-46DE-9830-ED7665DE69A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B9C41AF-0302-46DE-9830-ED7665DE69A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B9C41AF-0302-46DE-9830-ED7665DE69A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B9C41AF-0302-46DE-9830-ED7665DE69A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
