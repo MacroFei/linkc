@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcMovie", "MvcMovie\MvcMov
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "TodoApi\TodoApi.csproj", "{2493EF7A-F0EF-4870-B0E4-457A855A7A2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksApi", "BooksApi\BooksApi.csproj", "{F93A7C33-8215-4116-A7BF-72F5480FD54B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksApi", "BooksApi\BooksApi.csproj", "{F93A7C33-8215-4116-A7BF-72F5480FD54B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChat", "SignalRChat\SignalRChat.csproj", "{0B9C41AF-0302-46DE-9830-ED7665DE69A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat", "SignalRChat\SignalRChat.csproj", "{0B9C41AF-0302-46DE-9830-ED7665DE69A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity", "ContosoUniversity\ContosoUniversity.csproj", "{A1F46917-F85A-45D1-B4FF-B5AFCDC48679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0B9C41AF-0302-46DE-9830-ED7665DE69A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B9C41AF-0302-46DE-9830-ED7665DE69A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B9C41AF-0302-46DE-9830-ED7665DE69A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1F46917-F85A-45D1-B4FF-B5AFCDC48679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F46917-F85A-45D1-B4FF-B5AFCDC48679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F46917-F85A-45D1-B4FF-B5AFCDC48679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F46917-F85A-45D1-B4FF-B5AFCDC48679}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
