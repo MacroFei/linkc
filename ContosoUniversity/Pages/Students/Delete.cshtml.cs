@@ -21,22 +21,63 @@ namespace ContosoUniversity
 
         [BindProperty]
         public Student Student { get; set; }
+        public string ErrorMessage { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int? id,bool? saveChangesError = false)
         {
-            if (id == null)
+            if(id == null)
+            {
+                return NotFound();
+            }
+            Student = await _context.Students
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.ID == id);
+
+            if(Student == null)
             {
                 return NotFound();
             }
 
-            Student = await _context.Students.FirstOrDefaultAsync(m => m.ID == id);
-
-            if (Student == null)
+            if (saveChangesError.GetValueOrDefault())
             {
-                return NotFound();
+                ErrorMessage = "Delete failed. Try again";
             }
             return Page();
         }
+
+        //public async Task<IActionResult> OnGetAsync(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    Student = await _context.Students.FirstOrDefaultAsync(m => m.ID == id);
+
+        //    if (Student == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Page();
+        //}
+
+        //public async Task<IActionResult> OnPostAsync(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    Student = await _context.Students.FindAsync(id);
+
+        //    if (Student != null)
+        //    {
+        //        _context.Students.Remove(Student);
+        //        await _context.SaveChangesAsync();
+        //    }
+
+        //    return RedirectToPage("./Index");
+        //}
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
@@ -45,15 +86,25 @@ namespace ContosoUniversity
                 return NotFound();
             }
 
-            Student = await _context.Students.FindAsync(id);
+            var student = await _context.Students.FindAsync(id);
 
-            if (Student != null)
+            if (student == null) 
             {
-                _context.Students.Remove(Student);
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
 
-            return RedirectToPage("./Index");
+            try
+            {
+                _context.Students.Remove(student);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+
+            }
+            catch (DbUpdateException /* ex */)
+            {
+                return RedirectToAction("./Delete",
+                    new { id, saveChangesError = true });
+            }
         }
     }
 }
